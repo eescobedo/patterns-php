@@ -1,12 +1,12 @@
 <?php
 
-require 'vendor/autoload.php';
+use Acme\Adapters\Book;
+use Acme\Adapters\BookInterface;
+use Acme\Adapters\eReaderAdapter;
+use Acme\Adapters\Kindle;
+use Acme\Adapters\Nook;
 
-use Acme\Book;
-use Acme\BookInterface;
-use Acme\Kindle;
-use Acme\eReaderAdapter;
-use Acme\Nook;
+require 'vendor/autoload.php';
 
 class Person
 {
@@ -18,7 +18,7 @@ class Person
 
 }
 
-//(new Person)->read(new Book);
+(new Person)->read(new Book);
 
-//(new Person)->read(new eReaderAdapter(new Kindle));
+(new Person)->read(new eReaderAdapter(new Kindle));
 (new Person)->read(new eReaderAdapter(new Nook()));

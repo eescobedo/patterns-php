@@ -1,4 +1,4 @@
-<?php namespace Acme;
+<?php namespace Acme\Adapters;
 
 class Book implements BookInterface {
 
