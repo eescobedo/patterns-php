@@ -1,17 +1,10 @@
 <?php namespace Acme\Specification;
 
-class Customer
-{
-    protected $type;
+use Illuminate\Database\Eloquent\Model as Eloquent;
 
-    /**
-     * Customer constructor.
-     * @param $type
-     */
-    public function __construct($type)
-    {
-        $this->type = $type;
-    }
+class Customer extends Eloquent
+{
+    protected $fillable = ['name', 'type'];
 
     public function type()
     {
