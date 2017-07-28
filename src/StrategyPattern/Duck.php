@@ -24,4 +24,14 @@ abstract class Duck
         echo "All ducks float, even decoys!";
     }
 
+    public function setFlyBehavior(FlyBehavior $flyBehavior)
+    {
+        $this->flyBehavior = $flyBehavior;
+    }
+
+    public function setQuackBehavior(QuackBehavior $quackBehavior)
+    {
+        $this->quackBehavior = $quackBehavior;
+    }
+
 }
